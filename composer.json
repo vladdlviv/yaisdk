@@ -1,0 +1,20 @@
+{
+    "name": "vladdlviv/yaisdk",
+    "type": "sdk",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Volodymyr D",
+            "email": "vladdlviv@github.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "vladdlviv\\yaisdk\\": "src"
+        }
+    }
+}
