@@ -12,6 +12,9 @@
         "php": ">=5.6",
         "ext-curl": "*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "6.2.*"
+    },
     "autoload": {
         "psr-4": {
             "vladdlviv\\yaisdk\\": "src"

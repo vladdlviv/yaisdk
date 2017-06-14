@@ -20,6 +20,10 @@ class yaisdkBase {
         );
     }
 
+    public function getCall() {
+        return $this->call;
+    }
+
     //TODO move it!
     protected function redirect($url) {
         header('Location:'.$url);

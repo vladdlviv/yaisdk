@@ -1,8 +1,8 @@
 ## Yet Another Instagram SDK
 
+**THIS IS TEST TASK | INCOMPLETE FUNCTIONALITY**
 
-
-## Task
+## Test Task 
 Please implement at least 3 calls from each section.
 - Auth 
 - Users 
