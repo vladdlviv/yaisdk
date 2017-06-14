@@ -94,4 +94,16 @@ class httpClientMiddleware {
         return $this->_makeRequest('get', \vladdlviv\yaisdk\yaisdkBase::_URL.'media/search', $params);
     }
 
+    public function getLikes($id) {
+        return $this->_makeRequest('get', \vladdlviv\yaisdk\yaisdkBase::_URL.'media/'.$id.'/likes', array());
+    }
+
+    public function postLike($id) {
+        return $this->_makeRequest('post', \vladdlviv\yaisdk\yaisdkBase::_URL.'media/'.$id.'/likes', array());
+    }
+
+    public function deleteLike($id) {
+        return $this->_makeRequest('delete', \vladdlviv\yaisdk\yaisdkBase::_URL.'media/'.$id.'/likes', array());
+    }
+
 }
