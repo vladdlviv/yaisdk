@@ -23,7 +23,7 @@ class httpClient implements httpClientInterface {
         return $raw_response;
     }
 
-    public function get( $url, array $data = null ){
+    public function get( $url, $data = [] ){
         curl_setopt( $this->curl, CURLOPT_CUSTOMREQUEST, 'GET' );
         curl_setopt( $this->curl, CURLOPT_URL, sprintf( "%s?%s", $url, http_build_query( $data ) ) );
         return $this->fetch();

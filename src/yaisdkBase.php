@@ -8,11 +8,16 @@ class yaisdkBase {
     const _OAUTH_TOKEN_URL = 'https://api.instagram.com/oauth/access_token';
 
     protected $call;
+    protected $access_token;
+    protected $client_id;
 
-    public function __construct($access_token = null, \vladdlviv\yaisdk\httpClient\httpClientInterface $client = null)
+    public function __construct($access_token = null, $client_id = null, \vladdlviv\yaisdk\httpClient\httpClientInterface $client = null)
     {
-        $this->call = new \vladdlviv\yaisdk\httpClient\httpClientMiddleware(($client) ? $client : new \vladdlviv\yaisdk\httpClient\httpClient);
-        var_dump($this);
+        $this->access_token = ($access_token) ? $access_token : $this->access_token;
+        $this->client_id = ($client_id) ? $client_id : $this->client_id;
+        $this->call = new \vladdlviv\yaisdk\httpClient\httpClientMiddleware(
+            $this->access_token, $this->client_id, ($client) ? $client : new \vladdlviv\yaisdk\httpClient\httpClient
+        );
     }
 
     //TODO move it!

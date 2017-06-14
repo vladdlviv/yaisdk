@@ -17,8 +17,9 @@ class yaisdkAuth extends \vladdlviv\yaisdk\yaisdkBase {
 
     public function __construct(array $config, $access_token = null, \vladdlviv\yaisdk\httpClient\httpClientInterface $client = null)
     {
-        parent::__construct($access_token, $client);
         $this->config = array_merge($this->config, $config);
+        parent::__construct($access_token, $config['client_id'], $client);
+
     }
 
     public function getAuthCode() {
